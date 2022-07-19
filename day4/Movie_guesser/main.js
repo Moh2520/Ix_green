@@ -36,7 +36,7 @@ buttonInput.addEventListener('click', (event) => {
   resultDiv.innerHTML = '$' + total.toFixed(2);
 
   resultDiv.classList.add('alert');
-  resultDiv.classList.add('alert-success');
+  resultDiv.classList.add('jgrgrjgnrgrjg-success');
   resultDiv.classList.add('mt-4');
 
   cardBody.append(resultDiv);
