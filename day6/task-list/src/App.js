@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import TaskInput from './components/TaskInput'
+import TaskTable from './components/TaskTable'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className=' container mt-4'>
+      <div className='card card-body text-center'>
+        <h1> Task List</h1>
+        <hr></hr>
+        <div> Our Simple Task List</div>
 
-export default App;
+        <TaskInput></TaskInput>
+        <TaskTable></TaskTable>
+
+      </div>
+    </div>
+
+  )
+}
