@@ -29,12 +29,14 @@ export default function TaskTable(props) {
               <tr key={task.id}>
                 <td>{task.name}</td>
                 <td>
-                  {task.complete ? "Complete" : "Not Complete"}
+                  <i className={
+                    task.complete ? "bi bi-circle-fill" : "bi bi-circle"
+                  }></i>
                 </td>
                 <td>
                   <button
                     onClick={(e) => onToggleTaskClicked(task)}
-                    className='btn btn-primary btn-sm'> ToogleComplete
+                    className='btn btn-primary btn-sm'>
                     <i className={
                     task.complete ? "bi bi-toggle-off" : "bi bi-toggle-on"
                   }></i>
@@ -42,7 +44,7 @@ export default function TaskTable(props) {
 
                   <button
                     onClick={(e) => onTaskRemove(task)}
-                    className='btn btn-primary btn-sm ms-3'> RemoveTask
+                    className='btn btn-primary btn-sm ms-3'>
                     <i className="bi bi-trash"></i>
                   </button>
                 </td>

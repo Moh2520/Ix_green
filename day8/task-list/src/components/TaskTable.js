@@ -28,13 +28,19 @@ export default function TaskTable(props) {
             props.tasks.map((task) =>
               <tr key={task.id}>
                 <td>{task.name}</td>
-                <td>
-                  {task.complete ? "Complete" : "Not Complete"}
+                <td>{
+                  task.complete ?
+                  <i className="bi bi-circle"></i>
+                  :
+                  <i className="bi bi-circle-fill green"></i>
+                  
+                  }
+                
                 </td>
                 <td>
                   <button
                     onClick={(e) => onToggleTaskClicked(task)}
-                    className='btn btn-primary btn-sm'> ToogleComplete
+                    className='btn btn-primary btn-sm'> 
                     <i className={
                     task.complete ? "bi bi-toggle-off" : "bi bi-toggle-on"
                   }></i>
@@ -42,7 +48,7 @@ export default function TaskTable(props) {
 
                   <button
                     onClick={(e) => onTaskRemove(task)}
-                    className='btn btn-primary btn-sm ms-3'> RemoveTask
+                    className='btn btn-primary btn-sm ms-3'> 
                     <i className="bi bi-trash"></i>
                   </button>
                 </td>
